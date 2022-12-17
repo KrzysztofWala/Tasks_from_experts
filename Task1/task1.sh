@@ -1,5 +1,5 @@
 #! /bin/bash
-# The current time in format hh:mm:ss
+# The current time in format hh:mm:ss   
 echo Actual time:
 echo $(date) | grep -o "\b[0-9][0-9]:[0-9][0-9]:[0-9][0-9]\b"
 
