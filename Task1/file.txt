@@ -46,7 +46,9 @@ look like people, but they’re machines.”
 
 “Use your transmitter, Major,” Klaus said. “We can’t stay up here forever.”
 
-Holding the transmitter tightly Hendricks called the code of the command bunker. He waited, listening. No response. Only silence. He checked the leads carefully. Everything was in place.
+Holding the transmitter tightly Hendricks called the code of the command bunker. He waited, listening. No response. 
+
+ silence. He checked the leads carefully. Everything was in place.
 
 “Scott!” he said into the mike. “Can you hear me?”
 
