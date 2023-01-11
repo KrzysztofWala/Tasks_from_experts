@@ -1,0 +1,4 @@
+# Ignored files
+create_docker.sh
+Dockerfile
+postgres_docker_start.sh
