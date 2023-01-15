@@ -1,0 +1,13 @@
+version: "3.8"
+networks:
+  net2:
+    driver: bridge
+services:
+  app:
+    build: ./app/
+    networks:
+      - net2
+  db:
+    build: ./database/
+    networks:
+      - net2
