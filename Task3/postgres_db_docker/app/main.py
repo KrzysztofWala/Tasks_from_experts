@@ -3,7 +3,7 @@ import logging
 import time
 import sys
 
-from database import Pool
+from database import DB_Pool
 from user import User
 
 def main():
@@ -12,24 +12,19 @@ def main():
     # Waiting for db start
     time.sleep(15)
 
-    # logging configuration
+    # Logging configuration
     logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
     # Creating connection pool object
-    pool = Pool()
-   
-    # Creating object user which represent record from db
-    my_user = User('4','Tadeusz', 'Norek')
+    pool = DB_Pool(1,3)
 
-    # Store my_user record in database
-    my_user.save_to_db(pool)
+    # Sending data test
+    sql_query = 'INSERT INTO users (id_user, first_name, last_name) VALUES (%s, %s, %s)'
+    data = ['4','Tadeusz', 'Norek']
+    pool.send_to_db(sql_query, data)
 
-    # Loading and display record from db
-    my_user = User.load_user_from_db(pool, '3')
-    logging.info(my_user)
-
-    # Singleton test
-    pool2 = Pool()
+    # Singleton pattern test
+    pool2 = DB_Pool(1,10)
     logging.info(pool is pool2)
 
 
