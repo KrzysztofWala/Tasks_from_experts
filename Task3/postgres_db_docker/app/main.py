@@ -37,7 +37,7 @@ def main():
         users_data = db.get_db_users(connection)
         pool.return_connection(connection)
         hf.store_users_file(users_data, PATH)
-
+        
         # Main loop
         while True:
             logging.info('________________________WAITING FOR FILES________________________')
